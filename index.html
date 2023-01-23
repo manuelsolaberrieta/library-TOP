@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Biblioteca Odin</h1>
+      <button class="showForm">Add Book</button>
+    </header>
+    <main>
+      <section class="books"></section>
+      <section class="pop-up hidden">
+        <form action="" class="bookForm">
+          <span class="closePopUp">X</span>
+          <div class="input-and-label">
+            <label for="bookName">Book Name</label
+            ><input
+              type="text"
+              name="bookName"
+              id="bookName"
+              required
+              pattern="[A-Za-z0-9]+"
+            />
+          </div>
+          <div class="input-and-label">
+            <label for="bookAuthor">Book Author</label
+            ><input type="text" name="bookAuthor" id="bookAuthor" required />
+          </div>
+          <div class="input-and-label">
+            <label for="numPages">Number of Pages</label
+            ><input
+              type="number"
+              name="numPages"
+              id="numPages"
+              required
+              min="1"
+            />
+          </div>
+          <div class="input-and-label">
+            <label for="read">Have you read it?</label
+            ><input type="checkbox" name="read" id="read" required />
+          </div>
+          <input class="save" type="submit" value="save" />
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

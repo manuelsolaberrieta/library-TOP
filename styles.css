@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+}
+header {
+  min-height: 20vh;
+}
+header h1 {
+  -webkit-text-stroke: 0.7px rgb(255, 251, 0);
+  font-size: 45px;
+}
+header,
+footer {
+  border: 10px solid rgb(163, 122, 56);
+  background-color: rgb(221, 158, 81);
+  text-align: center;
+}
+.showForm {
+  margin-top: 50px;
+}
+main {
+  height: 60vh;
+  background-color: rgb(251, 189, 113);
+}
+.books {
+  height: 100%;
+  max-height: 56vh;
+  border: 10px solid rgb(95, 23, 23);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
+  grid-auto-rows: min-content;
+  gap: 10px;
+  overflow-y: scroll;
+}
+.book {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px;
+  background-color: palegoldenrod;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+}
+.hidden {
+  visibility: hidden;
+}
+.pop-up {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 300px;
+  background-color: rgb(199, 160, 97);
+  border-bottom: 10px solid white;
+  border-right: 10px solid white;
+}
+.closePopUp {
+  font-weight: bolder;
+  align-self: flex-end;
+  margin-right: 5px;
+}
+.buttoner {
+  display: flex;
+  gap: 10px;
+}
+.closePopUp:hover {
+  cursor: grab;
+}
+button,
+.save {
+  padding: 5px;
+}
+.delete,
+.read,
+.not-read {
+  width: min-content;
+  align-self: flex-end;
+  padding: 2px;
+}
+.read {
+  background-color: green;
+  color: yellow;
+  font-weight: bolder;
+}
+.not-read {
+  background-color: red;
+  color: white;
+  text-decoration: line-through;
+}
+.delete {
+  background-color: darkred;
+  color: white;
+}
+label {
+  display: block;
+}
+.input-and-label {
+  width: 180px;
+}
+.input-and-label:has(> label[for="read"]) {
+  display: flex;
+  justify-content: space-between;
+}
+.bookForm {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  height: 16vh;
+}
